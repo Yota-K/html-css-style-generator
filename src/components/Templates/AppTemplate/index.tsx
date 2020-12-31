@@ -7,7 +7,7 @@ import { CardList } from '../../Organisms/CardList/index';
 
 interface Props {
   title: string;
-  cardData: CardDataProps[];
+  cardData?: CardDataProps[];
 }
 
 export const AppTemplate: React.FC<Props> = ({ title, cardData }) => {
@@ -18,7 +18,8 @@ export const AppTemplate: React.FC<Props> = ({ title, cardData }) => {
       </Head>
       <AppHeader />
       <Container>
-        <CardList cardData={cardData} />
+        {/* トップ */}
+        {cardData && <CardList cardData={cardData} />}
       </Container>
     </>
   );
