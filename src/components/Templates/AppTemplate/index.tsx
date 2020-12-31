@@ -22,4 +22,4 @@ export const AppTemplate: React.FC<Props> = ({ title, cardData }) => {
       </Container>
     </>
   );
-}
+};

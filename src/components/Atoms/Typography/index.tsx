@@ -8,7 +8,5 @@ interface Props {
 }
 
 export const AppTypography: React.FC<Props> = ({ variant, text }) => {
-  return (
-    <Typography variant={variant}>{ text }</Typography>
-  );
-}
+  return <Typography variant={variant}>{text}</Typography>;
+};
