@@ -17,6 +17,8 @@ export const CardDescription: React.FC<Props> = ({ description }) => {
   const classes = useStyles();
 
   return (
-    <Typography className={classes.cardDescription} variant="body2">{ description }</Typography>
+    <Typography className={classes.cardDescription} variant="body2">
+      {description}
+    </Typography>
   );
-}
+};
