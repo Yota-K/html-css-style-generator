@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const AppCard: React.FC<Props> = ({ heading, description }) => {
+export const AppCard: React.FC<Props> = ({ heading, description, path }) => {
   const classes = useStyles();
 
   return (
@@ -31,7 +31,7 @@ export const AppCard: React.FC<Props> = ({ heading, description }) => {
         <CardHeading heading={heading} />
         <CardDescription description={description} />
         <CardActions>
-          <AppButton variant="outlined" color="primary" text="使ってみる" />
+          <AppButton variant="outlined" color="primary" href={path} text="使ってみる" />
         </CardActions>
       </CardContent>
     </Card>
