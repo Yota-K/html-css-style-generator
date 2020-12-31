@@ -28,7 +28,7 @@ export const AppCard: React.FC<Props> = ({ heading, description }) => {
   return (
     <Card className={classes.root}>
       <CardContent>
-        <CardHeading heading={heading}/>
+        <CardHeading heading={heading} />
         <CardDescription description={description} />
         <CardActions>
           <AppButton variant="outlined" color="primary" text="使ってみる" />
@@ -36,4 +36,4 @@ export const AppCard: React.FC<Props> = ({ heading, description }) => {
       </CardContent>
     </Card>
   );
-}
+};

@@ -19,14 +19,9 @@ export const CardList: React.FC<Props> = ({ cardData }) => {
 
   return (
     <div className={classes.root}>
-      {cardData.map((el, i)=> 
-        <AppCard
-          key={i}
-          heading={el.heading}
-          description={el.description}
-          path={el.path}
-        />
-      )}
+      {cardData.map((el, i) => (
+        <AppCard key={i} heading={el.heading} description={el.description} path={el.path} />
+      ))}
     </div>
   );
-}
+};
