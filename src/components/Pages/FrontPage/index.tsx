@@ -21,5 +21,5 @@ const cardData: CardDataProps[] = [
 ];
 
 export const FrontPage = () => {
-  return <AppTemplate title="アプリケーション" cardData={cardData} />;
+  return <AppTemplate title="Style Generator" cardData={cardData} />;
 };

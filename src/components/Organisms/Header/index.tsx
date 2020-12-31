@@ -16,7 +16,7 @@ export const AppHeader: React.FC = () => {
   return (
     <AppBar className={classes.root} position="static">
       <Toolbar>
-        <AppTypography variant="h1" text="アプリケーション" />
+        <AppTypography variant="h1" text="Style Generator" />
       </Toolbar>
     </AppBar>
   );
