@@ -27,12 +27,17 @@ const CardList = styled.nav`
   width: 100%;
   overflow-x: auto;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .cards-wrapper {
     display: flex;
 
     .MuiCard-root {
       margin: 0 10px;
       min-width: 280px;
+      cursor: pointer;
     }
   }
 `;
