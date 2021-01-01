@@ -4,10 +4,14 @@ import styled from 'styled-components';
 export const Code = () => {
   return (
     <CodePre>
-      Test
+      <code>{`.button-style {
+  display: block;
+  padding: 4px 12px;
+  font-size: 16px;
+}`}</code>
     </CodePre>
   );
-}
+};
 
 const CodePre = styled.pre`
   margin: 20px 0px;

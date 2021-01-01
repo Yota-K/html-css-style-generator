@@ -11,7 +11,13 @@ export interface Props {
 
 export const GenerateButton: React.FC<Props> = ({ defaultStyles, hoverStyles, activeStyles }) => {
   return (
-    <Button href="#" defaultStyles={defaultStyles} hoverStyles={hoverStyles} activeStyles={activeStyles}>
+    <Button
+      className="button-style"
+      href="#"
+      defaultStyles={defaultStyles}
+      hoverStyles={hoverStyles}
+      activeStyles={activeStyles}
+    >
       ボタン
     </Button>
   );
