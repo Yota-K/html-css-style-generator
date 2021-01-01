@@ -5,17 +5,20 @@ import CardContent from '@material-ui/core/CardContent';
 import { CardHeading } from '../../../Atoms/CardHeading/index';
 import { GenerateButton } from '../../../Atoms/ButtonGenerator/Button/index';
 
+import { ButtonCardDataProps } from '../../../../../type/index';
+
 interface Props {
-  heading: string;
-  defaultStyles: any;
+  heading: ButtonCardDataProps['heading'];
+  defaultStyles: ButtonCardDataProps['defaultStyles'];
+  activeStyles?: ButtonCardDataProps['activeStyles'];
 }
 
-export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles }) => {
+export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, activeStyles }) => {
   return (
     <Card>
       <CardContent>
         <CardHeading heading={heading} />
-        <GenerateButton defaultStyles={defaultStyles} />
+        <GenerateButton defaultStyles={defaultStyles} activeStyles={activeStyles} />
       </CardContent>
     </Card>
   );

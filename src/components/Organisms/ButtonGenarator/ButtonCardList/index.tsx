@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ButtonCard } from '../../../Molecules/ButtonGenerator/ButtonCard/index';
 import { AppTypography } from '../../../Atoms/Typography/index';
+import { ButtonCard } from '../../../Molecules/ButtonGenerator/ButtonCard/index';
+import { ButtonCardDataProps } from '../../../../../type/index';
 
 interface Props {
-  cardData: any;
+  cardData: ButtonCardDataProps[];
 }
 
 export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
@@ -14,7 +15,7 @@ export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
       <CardList>
         <div className="cards-wrapper">
           {cardData.map((el, i) => (
-            <ButtonCard key={i} heading={el.heading} defaultStyles={el.defaultStyles} />
+            <ButtonCard key={i} heading={el.heading} defaultStyles={el.defaultStyles} activeStyles={el.activeStyles} />
           ))}
         </div>
       </CardList>

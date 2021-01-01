@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import React from 'react';
+import Container from '@material-ui/core/Container';
+
 import { AppTypography } from '../../Atoms/Typography/index';
 import { AppHeader } from '../../Organisms/Header/index';
-import Container from '@material-ui/core/Container';
 import { ButtonCardList } from '../../Organisms/ButtonGenarator/ButtonCardList/index';
+import { ButtonCardDataProps } from '../../../../type/index';
 
 interface Props {
   title: string;
   featureTitle: string;
-  cardData: any;
+  cardData: ButtonCardDataProps[];
 }
 
 export const CreateView: React.FC<Props> = ({ title, featureTitle, cardData }) => {
