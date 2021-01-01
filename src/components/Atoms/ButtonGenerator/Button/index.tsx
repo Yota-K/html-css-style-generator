@@ -22,10 +22,14 @@ const Button = styled.a<Props>`
   padding: 4px 12px;
   font-size: 16px;
   text-decoration: none;
+  ${(props) => (props.defaultStyles.fontWeight ? getProperty('font-weight', props.defaultStyles.fontWeight) : '')}
   ${(props) => (props.defaultStyles.background ? getProperty('background', props.defaultStyles.background) : '')}
   ${(props) => (props.defaultStyles.color ? getProperty('color', props.defaultStyles.color) : '')}
   ${(props) => (props.defaultStyles.border ? getProperty('border', props.defaultStyles.border) : '')}
+  ${(props) => (props.defaultStyles.borderTop ? getProperty('border-top', props.defaultStyles.borderTop) : '')}
   ${(props) => (props.defaultStyles.borderBottom ? getProperty('border-bottom', props.defaultStyles.borderBottom) : '')}
+  ${(props) => (props.defaultStyles.borderLeft ? getProperty('border-left', props.defaultStyles.borderLeft) : '')}
+  ${(props) => (props.defaultStyles.borderRight ? getProperty('border-right', props.defaultStyles.borderRight) : '')}
   ${(props) => (props.defaultStyles.borderRadius ? getProperty('border-radius', props.defaultStyles.borderRadius) : '')}
   ${(props) => (props.defaultStyles.transition ? getProperty('transition', props.defaultStyles.transition) : '')}
 
@@ -36,7 +40,8 @@ const Button = styled.a<Props>`
 
   &:active {
     ${(props) => (props.activeStyles?.transform ? getProperty('transform', props.activeStyles.transform) : '')}
-    ${(props) => (props.activeStyles?.borderBottom ? getProperty('border-bottom', props.activeStyles.borderBottom) : '')}
+    ${(props) =>
+      props.activeStyles?.borderBottom ? getProperty('border-bottom', props.activeStyles.borderBottom) : ''}
   }
 `;
 
