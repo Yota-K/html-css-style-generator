@@ -15,7 +15,13 @@ export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
       <CardList>
         <div className="cards-wrapper">
           {cardData.map((el, i) => (
-            <ButtonCard key={i} heading={el.heading} defaultStyles={el.defaultStyles} activeStyles={el.activeStyles} />
+            <ButtonCard
+              key={i}
+              heading={el.heading}
+              defaultStyles={el.defaultStyles}
+              hoverStyles={el.hoverStyles}
+              activeStyles={el.activeStyles}
+            />
           ))}
         </div>
       </CardList>

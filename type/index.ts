@@ -11,17 +11,23 @@ export interface CardDataProps {
 export interface ButtonCardDataProps {
   heading: string;
   defaultStyles: {
+    background?: string;
     color?: string;
     border?: string;
+    borderBottom?: string;
     borderLeft?: string;
     borderRight?: string;
     borderRadius?: string;
     boxShadow?: string;
     transition?: string;
   };
-  activeStyles?: {
+  hoverStyles?: {
     background?: string;
     color?: string;
     transition?: string;
+  };
+  activeStyles?: {
+    transform?: string;
+    borderBottom?: string;
   };
 }

@@ -10,15 +10,16 @@ import { ButtonCardDataProps } from '../../../../../type/index';
 interface Props {
   heading: ButtonCardDataProps['heading'];
   defaultStyles: ButtonCardDataProps['defaultStyles'];
+  hoverStyles?: ButtonCardDataProps['hoverStyles'];
   activeStyles?: ButtonCardDataProps['activeStyles'];
 }
 
-export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, activeStyles }) => {
+export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles }) => {
   return (
     <Card>
       <CardContent>
         <CardHeading heading={heading} />
-        <GenerateButton defaultStyles={defaultStyles} activeStyles={activeStyles} />
+        <GenerateButton defaultStyles={defaultStyles} hoverStyles={hoverStyles} activeStyles={activeStyles} />
       </CardContent>
     </Card>
   );

@@ -9,7 +9,7 @@ export const cardData: ButtonCardDataProps[] = [
       borderRadius: '3px',
       transition: '.4s',
     },
-    activeStyles: {
+    hoverStyles: {
       background: '#67c5ff',
       color: '#fff',
     },
@@ -23,7 +23,14 @@ export const cardData: ButtonCardDataProps[] = [
   {
     heading: 'デザイン3',
     defaultStyles: {
-      border: '1px solid green',
+      background: 'green',
+      color: '#fff',
+      borderBottom: '4px solid #627295',
+      borderRadius: '3px',
+    },
+    activeStyles: {
+      transform: 'translateY(4px)',
+      borderBottom: 'none',
     },
   },
   {
