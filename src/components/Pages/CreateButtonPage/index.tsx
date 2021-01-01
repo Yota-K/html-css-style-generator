@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppTemplate } from '../../Templates/AppTemplate/index';
+import { CreateView } from '../../Templates/CreateView/index';
 
 export const CreateButtonPage = () => {
-  return <AppTemplate title="Style Generator｜ボタンの作成" />;
+  return <CreateView title="Style Generator｜ボタンの作成" />;
 };
