@@ -3,9 +3,10 @@ import { Props } from './index';
 
 export const Button = styled.a<Props>`
   display: inline-block;
+  text-decoration: none;
   padding: 4px 12px;
   font-size: 16px;
-  text-decoration: none;
+
   ${(props) => (props.defaultStyles.fontWeight ? getProperty('font-weight', props.defaultStyles.fontWeight) : '')}
   ${(props) => (props.defaultStyles.background ? getProperty('background', props.defaultStyles.background) : '')}
   ${(props) => (props.defaultStyles.color ? getProperty('color', props.defaultStyles.color) : '')}

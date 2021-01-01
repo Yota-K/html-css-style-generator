@@ -11,6 +11,10 @@ export interface CardDataProps {
 export interface ButtonCardDataProps {
   heading: string;
   defaultStyles: {
+    display?: string;
+    textDecoration?: string;
+    padding?: string;
+    fontSize?: string;
     fontWeight?: string;
     background?: string;
     color?: string;
