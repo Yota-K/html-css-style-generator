@@ -4,9 +4,16 @@ import { TypographyProps } from '@material-ui/core/Typography';
 
 interface Props {
   variant: TypographyProps['variant'];
-  text: string;
+  text?: string;
+  linkComponent?: React.ReactNode;
 }
 
-export const AppTypography: React.FC<Props> = ({ variant, text }) => {
-  return <Typography variant={variant}>{text}</Typography>;
+export const AppTypography: React.FC<Props> = ({ variant, text, linkComponent }) => {
+  return (
+    <Typography variant={variant}>
+      {text && text}
+      {/* ヘッダーのアプリケーションのタイトル部分で使用 */}
+      {linkComponent && linkComponent}
+    </Typography>
+  );
 };
