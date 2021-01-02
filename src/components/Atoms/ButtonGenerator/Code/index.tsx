@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
+import { styleGenerate } from './CodeGenerate';
+import { AppContext } from '../../../Templates/CreateButtonView/index';
+
 export const Code = () => {
+  const { state } = useContext(AppContext);
+
   return (
     <CodePre>
-      <code>{`.button-style {
-  display: block;
-  padding: 4px 12px;
-  font-size: 16px;
-}`}</code>
+      <code>{styleGenerate('button-style', state)}</code>
+      <code>{state.hoverStyles && styleGenerate('button-style:hover', state)}</code>
+      <code>{state.activeStyles && styleGenerate('button-style:active', state)}</code>
     </CodePre>
   );
 };
