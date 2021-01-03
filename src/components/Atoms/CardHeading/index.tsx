@@ -9,6 +9,7 @@ interface Props {
 const useStyles = makeStyles({
   heading: {
     fontSize: 18,
+    margin: '10px 0',
   },
 });
 
@@ -16,7 +17,7 @@ export const CardHeading: React.FC<Props> = ({ heading }) => {
   const classes = useStyles();
 
   return (
-    <Typography className={classes.heading} variant="h2">
+    <Typography className={classes.heading} variant="h3">
       {heading}
     </Typography>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppTemplate } from '../../Templates/AppTemplate/index';
+import { FrontView } from '../../Templates/FrontView/index';
 import { CardDataProps } from '../../../../type';
 
 const cardData: CardDataProps[] = [
@@ -21,5 +21,5 @@ const cardData: CardDataProps[] = [
 ];
 
 export const FrontPage = () => {
-  return <AppTemplate title="アプリケーション" cardData={cardData} />;
+  return <FrontView title="Style Generator" cardData={cardData} />;
 };

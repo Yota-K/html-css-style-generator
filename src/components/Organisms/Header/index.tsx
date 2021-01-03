@@ -2,7 +2,11 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import { AppTypography } from '../../Atoms/Typography/index';
+import { SiteTitle } from '../../Molecules/SiteTitle/index';
+
+interface Props {
+  title: string;
+}
 
 const useStyles = makeStyles({
   root: {
@@ -10,13 +14,13 @@ const useStyles = makeStyles({
   },
 });
 
-export const AppHeader: React.FC = () => {
+export const AppHeader: React.FC<Props> = ({ title }) => {
   const classes = useStyles();
 
   return (
     <AppBar className={classes.root} position="static">
       <Toolbar>
-        <AppTypography variant="h1" text="アプリケーション" />
+        <SiteTitle title={title} />
       </Toolbar>
     </AppBar>
   );
