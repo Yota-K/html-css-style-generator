@@ -1,22 +1,35 @@
 import { State } from '../../../../../reducers/ButtonGenerator/index';
 
 // スタイルの生成
-export const styleGenerate = (selector: string, state: State) => {
-  if (selector === 'button-style') {
-    const styles = replaceStr(state.defaultStyles);
+export const styleGenerate = (state: State) => {
+  // MEMO: 現状使っていない分岐だけど、使う可能性はあるので一応残しとく
+  if (state.defaultStyles && state.hoverStyles && state.activeStyles) {
+    const style = replaceStr(state.defaultStyles);
+    const hoverStyle = replaceStr(state.hoverStyles);
+    const activeStyle = replaceStr(state.activeStyles);
 
     return `.button-style {
-${styles}}\n`;
-  } else if (selector === 'button-style:hover') {
-    const styles = replaceStr(state.hoverStyles);
+${style}}
 
-    return `\n.button-style:hover {
-${styles}}\n`;
+.button-style:hover {
+${hoverStyle}}
+
+.button-style:active {
+${activeStyle}}`;
+  } else if (state.defaultStyles && state.hoverStyles) {
+    const style = replaceStr(state.defaultStyles);
+    const hoverStyle = replaceStr(state.hoverStyles);
+
+    return `.button-style {
+${style}}
+
+.button-style:hover {
+${hoverStyle}}`;
   } else {
-    const styles = replaceStr(state.activeStyles);
+    const style = replaceStr(state.defaultStyles);
 
-    return `\n.button-style:active {
-${styles}}\n`;
+    return `.button-style {
+${style}}`;
   }
 };
 
