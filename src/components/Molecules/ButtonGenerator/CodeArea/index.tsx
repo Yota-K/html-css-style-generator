@@ -1,16 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { Code } from '../../../Atoms/Code/index';
+import { CodeButton } from '../../../Atoms/CodeButton/index';
 
 interface Props {
-  htmlCode: string;
-  cssCode: string;
+  language: string;
+  code: string;
 }
 
-export const CodeArea: React.FC<Props> = ({ htmlCode, cssCode }) => {
+export const CodeArea: React.FC<Props> = ({ language, code }) => {
   return (
-    <>
-      <Code language="html" code={htmlCode} />
-      <Code language="css" code={cssCode} />
-    </>
+    <CodeAreaDiv>
+      <CodeButton />
+      <Code language={language} code={code} />
+    </CodeAreaDiv>
   );
 };
+
+const CodeAreaDiv = styled.div`
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+`;

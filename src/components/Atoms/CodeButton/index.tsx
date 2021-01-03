@@ -6,7 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 export const CodeButton = () => {
   return (
-    <Tooltip title="Copy" placement="right">
+    <Tooltip title="Copy" placement="left">
       <IconButton>
         <CodeIcon />
       </IconButton>
