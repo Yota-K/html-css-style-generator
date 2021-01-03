@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
+import { AppContext } from '../../../Templates/CreateButtonView/index';
 import { AppTypography } from '../../../Atoms/Typography/index';
-import { Code } from '../../../Atoms/ButtonGenerator/Code/index';
+import { CodeArea } from '../../../Molecules/ButtonGenerator/CodeArea/index';
+import { styleGenerate } from '../../../../../helpers/ButtonGenerator/index';
 
 interface Props {
   htmlCode: string;
 }
 
 export const ButtonCodeView: React.FC<Props> = ({ htmlCode }) => {
+  const { state } = useContext(AppContext);
+  const cssCode = styleGenerate(state);
+
   return (
     <>
       <AppTypography variant="h2" text="コード" />
       <CodeView>
-        <Code htmlCode={htmlCode} />
+        <CodeArea htmlCode={htmlCode} cssCode={cssCode} />
       </CodeView>
     </>
   );

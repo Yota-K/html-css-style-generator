@@ -1,4 +1,4 @@
-import { State } from '../../../../../reducers/ButtonGenerator/index';
+import { State } from '../../reducers/ButtonGenerator/index';
 
 // スタイルの生成
 export const styleGenerate = (state: State) => {
