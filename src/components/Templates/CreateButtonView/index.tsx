@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import { AppHeader } from '../../Organisms/Header/index';
 import { AppTypography } from '../../Atoms/Typography/index';
 import { ButtonCardList } from '../../Organisms/ButtonGenarator/ButtonCardList/index';
+import { ButtonPreview } from '../../Organisms/ButtonGenarator/Preview/index';
 import { ButtonCodeView } from '../../Organisms/ButtonGenarator/Codeview/index';
 import { ButtonCardDataProps } from '../../../../type/index';
 import { State, initialState, Action, reducer } from '../../../../reducers/ButtonGenerator/index';
@@ -40,6 +41,7 @@ export const CreateView: React.FC<Props> = ({ pageTitle, title, featureTitle, ca
       <Container>
         <AppTypography variant="h2" text={featureTitle} />
         <ButtonCardList cardData={cardData} />
+        <ButtonPreview />
         <ButtonCodeView htmlCode={htmlCode} />
       </Container>
     </AppProvider>
