@@ -13,6 +13,7 @@ interface Props {
   title: string;
   featureTitle: string;
   cardData: ButtonCardDataProps[];
+  htmlCode: string;
 }
 
 type ContextType = {
@@ -22,7 +23,7 @@ type ContextType = {
 
 export const AppContext = createContext({} as ContextType);
 
-export const CreateView: React.FC<Props> = ({ title, featureTitle, cardData }) => {
+export const CreateView: React.FC<Props> = ({ title, featureTitle, cardData, htmlCode }) => {
   const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -38,7 +39,7 @@ export const CreateView: React.FC<Props> = ({ title, featureTitle, cardData }) =
       <Container>
         <AppTypography variant="h2" text={featureTitle} />
         <ButtonCardList cardData={cardData} />
-        <ButtonCodeView />
+        <ButtonCodeView htmlCode={htmlCode} />
       </Container>
     </AppProvider>
   );

@@ -5,7 +5,11 @@ import { useRouter } from 'next/router';
 import { styleGenerate } from './CodeGenerate';
 import { AppContext } from '../../../Templates/CreateButtonView/index';
 
-export const Code = () => {
+interface Props {
+  htmlCode: string;
+}
+
+export const Code: React.FC<Props> = ({ htmlCode }) => {
   const { state } = useContext(AppContext);
 
   // 表示されているページのパスを取得
@@ -15,7 +19,7 @@ export const Code = () => {
   return (
     <>
       <CodePre>
-        <code>{`<a class="button-style">ボタン</a>`}</code>
+        <code>{htmlCode}</code>
       </CodePre>
       {path.match(/create-button/) && (
         <CodePre>
