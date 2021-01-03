@@ -10,13 +10,13 @@ interface Props {
   cardData: CardDataProps[];
 }
 
-export const AppTemplate: React.FC<Props> = ({ title, cardData }) => {
+export const FrontView: React.FC<Props> = ({ title, cardData }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <AppHeader />
+      <AppHeader title={title} />
       <Container>
         <CardList cardData={cardData} />
       </Container>
