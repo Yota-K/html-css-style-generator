@@ -10,6 +10,7 @@ export const initialState: State = {
     textDecoration: 'text-decoration: none;',
     padding: 'padding: 4px 12px;',
     fontSize: 'font-size: 16px;',
+    background: 'background: #fff;',
     color: 'color: #67c5ff;',
     border: 'border: 2px solid #67c5ff;',
     borderRadius: 'border-radius: 3px;',

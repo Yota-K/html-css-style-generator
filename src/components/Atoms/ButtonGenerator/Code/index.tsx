@@ -18,8 +18,14 @@ export const Code: React.FC<Props> = ({ htmlCode }) => {
 
   return (
     <>
-      <SyntaxHighlighter className="html-code" language="html">{htmlCode}</SyntaxHighlighter>
-      {path.match(/create-button/) && <SyntaxHighlighter className="css-code" language="css">{styleGenerate(state)}</SyntaxHighlighter>}
+      <SyntaxHighlighter className="html-code" language="html">
+        {htmlCode}
+      </SyntaxHighlighter>
+      {path.match(/create-button/) && (
+        <SyntaxHighlighter className="css-code" language="css">
+          {styleGenerate(state)}
+        </SyntaxHighlighter>
+      )}
     </>
   );
 };
