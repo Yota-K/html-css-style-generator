@@ -2,14 +2,21 @@ import React from 'react';
 
 import IconButton from '@material-ui/core/IconButton';
 import CodeIcon from '@material-ui/icons/Code';
-import Tooltip from '@material-ui/core/Tooltip';
 
-export const CodeButton = () => {
+import { copyToClipboard } from '../../../../helpers/copyToClicpBoard';
+
+interface Props {
+  code: string;
+}
+
+export const CodeButton: React.FC<Props> = ({ code }) => {
+  const handleClick = () => {
+    copyToClipboard(code);
+  };
+
   return (
-    <Tooltip title="Copy" placement="left">
-      <IconButton>
-        <CodeIcon />
-      </IconButton>
-    </Tooltip>
+    <IconButton>
+      <CodeIcon onClick={handleClick} />
+    </IconButton>
   );
 };
