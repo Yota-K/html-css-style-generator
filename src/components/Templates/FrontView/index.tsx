@@ -16,7 +16,7 @@ export const FrontView: React.FC<Props> = ({ title, cardData }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <AppHeader />
+      <AppHeader title={title} />
       <Container>
         <CardList cardData={cardData} />
       </Container>
