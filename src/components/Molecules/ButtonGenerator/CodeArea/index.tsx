@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { Code } from '../../../Atoms/Code/index';
 import { CodeButton } from '../../../Atoms/CodeButton/index';
@@ -24,7 +23,7 @@ const CodeAreaDiv = styled.div`
 
   button {
     position: absolute;
-    top: 0;
-    right: 10px;
+    top: 8px;
+    right: 16px;
   }
 `;

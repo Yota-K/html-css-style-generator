@@ -28,11 +28,17 @@ export const ButtonCodeView: React.FC<Props> = ({ htmlCode }) => {
 const CodeView = styled.div`
   margin-bottom: 80px;
 
+  pre {
+    padding: 45px 1em 1em !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .css-code {
     height: 320px;
 
     &::-webkit-scrollbar {
       width: 10px;
+      height: 10px;
     }
 
     &::-webkit-scrollbar-track {
