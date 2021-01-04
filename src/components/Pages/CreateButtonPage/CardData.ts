@@ -76,6 +76,7 @@ export const cardData: ButtonCardDataProps[] = [
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
       fontSize: 'font-size: 16px;',
+      background: 'background: #fff;',
       border: 'border: 4px double orange;',
       borderRadius: 'border-radius: 3px;',
       transition: 'transition: .4s;',

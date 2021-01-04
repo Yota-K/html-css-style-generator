@@ -1,7 +1,9 @@
 import React from 'react';
+
+import { makeStyles } from '@material-ui/core/styles';
+
 import { AppCard } from '../../Molecules/Card/index';
 import { CardDataProps } from '../../../../type';
-import { makeStyles } from '@material-ui/core/styles';
 
 interface Props {
   cardData: CardDataProps[];

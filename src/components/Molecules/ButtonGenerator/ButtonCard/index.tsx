@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import { AppContext } from '../../../Templates/CreateButtonView/index';
+import { ButtonCardDataProps } from '../../../../../type/index';
 import { CardHeading } from '../../../Atoms/CardHeading/index';
 import { GenerateButton } from '../../../Atoms/ButtonGenerator/Button/index';
-
-import { ButtonCardDataProps } from '../../../../../type/index';
 
 interface Props {
   heading: ButtonCardDataProps['heading'];

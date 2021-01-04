@@ -1,12 +1,13 @@
-import Head from 'next/head';
 import React, { createContext, useReducer } from 'react';
+
 import Container from '@material-ui/core/Container';
+import Head from 'next/head';
 
 import { AppHeader } from '../../Organisms/Header/index';
 import { AppTypography } from '../../Atoms/Typography/index';
 import { ButtonCardList } from '../../Organisms/ButtonGenarator/ButtonCardList/index';
-import { ButtonPreview } from '../../Organisms/ButtonGenarator/Preview/index';
 import { ButtonCodeView } from '../../Organisms/ButtonGenarator/Codeview/index';
+import { ButtonPreview } from '../../Organisms/ButtonGenarator/Preview/index';
 import { ButtonCardDataProps } from '../../../../type/index';
 import { State, initialState, Action, reducer } from '../../../../reducers/ButtonGenerator/index';
 
