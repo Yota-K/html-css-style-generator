@@ -34,6 +34,7 @@ export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
 const CardList = styled.nav`
   width: 100%;
   overflow-x: auto;
+  padding: 12px 0;
 
   &::-webkit-scrollbar {
     display: none;
