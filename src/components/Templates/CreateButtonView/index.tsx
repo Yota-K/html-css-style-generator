@@ -13,6 +13,7 @@ import { State, initialState, Action, reducer } from '../../../../reducers/Butto
 
 interface Props {
   title: string;
+  description: string;
   pageTitle: string;
   featureTitle: string;
   cardData: ButtonCardDataProps[];
@@ -26,7 +27,7 @@ type ContextType = {
 
 export const AppContext = createContext({} as ContextType);
 
-export const CreateView: React.FC<Props> = ({ pageTitle, title, featureTitle, cardData, htmlCode }) => {
+export const CreateView: React.FC<Props> = ({ pageTitle, title, description, featureTitle, cardData, htmlCode }) => {
   const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -37,6 +38,7 @@ export const CreateView: React.FC<Props> = ({ pageTitle, title, featureTitle, ca
     <AppProvider>
       <Head>
         <title>{pageTitle}</title>
+        <meta name="description" content={description} />
       </Head>
       <AppHeader title={title} />
       <Container>

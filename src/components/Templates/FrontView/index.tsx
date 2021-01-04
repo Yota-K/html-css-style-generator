@@ -9,14 +9,16 @@ import { CardList } from '../../Organisms/CardList/index';
 
 interface Props {
   title: string;
+  description: string;
   cardData: CardDataProps[];
 }
 
-export const FrontView: React.FC<Props> = ({ title, cardData }) => {
+export const FrontView: React.FC<Props> = ({ title, description, cardData }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
       </Head>
       <AppHeader title={title} />
       <Container>
