@@ -10,8 +10,13 @@ export interface Props {
 }
 
 export const GenerateButton: React.FC<Props> = ({ defaultStyles, hoverStyles, activeStyles }) => {
+  const buttonClick = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+  };
+
   return (
     <Button
+      onClick={buttonClick}
       className="button-style"
       href="#"
       defaultStyles={defaultStyles}
