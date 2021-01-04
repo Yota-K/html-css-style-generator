@@ -13,7 +13,7 @@ interface Props {
 export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
   return (
     <>
-      <AppTypography variant="h2" text="デザインを選ぶ" />
+      <AppTypography variant="h3" text="デザインを選ぶ" />
       <CardList>
         <div className="cards-wrapper">
           {cardData.map((el, i) => (

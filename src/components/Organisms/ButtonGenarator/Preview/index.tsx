@@ -11,7 +11,7 @@ export const ButtonPreview = () => {
 
   return (
     <>
-      <AppTypography variant="h2" text="プレビュー" />
+      <AppTypography variant="h3" text="プレビュー" />
       <PreviewArea>
         <GenerateButton
           defaultStyles={state.defaultStyles}
