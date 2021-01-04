@@ -1,6 +1,7 @@
 import React from 'react';
-import { FrontView } from '../../Templates/FrontView/index';
+
 import { CardDataProps } from '../../../../type';
+import { FrontView } from '../../Templates/FrontView/index';
 
 const cardData: CardDataProps[] = [
   {
