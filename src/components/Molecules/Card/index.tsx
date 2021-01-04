@@ -1,12 +1,13 @@
 import React from 'react';
+
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { CardHeading } from '../../Atoms/CardHeading/index';
-import { CardDescription } from '../../Atoms/CardDescription/index';
 import { AppButton } from '../../Atoms/Button/index';
+import { CardDescription } from '../../Atoms/CardDescription/index';
+import { CardHeading } from '../../Atoms/CardHeading/index';
 
 interface Props {
   heading: string;

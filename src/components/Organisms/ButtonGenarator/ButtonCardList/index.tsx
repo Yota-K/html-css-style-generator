@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import { AppTypography } from '../../../Atoms/Typography/index';
 import { ButtonCard } from '../../../Molecules/ButtonGenerator/ButtonCard/index';
 import { ButtonCardDataProps } from '../../../../../type/index';

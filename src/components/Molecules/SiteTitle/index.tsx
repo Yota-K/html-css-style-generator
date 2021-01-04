@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppTypography } from '../../Atoms/Typography/index';
+
 import { AppLink } from '../../Atoms/Link/index';
+import { AppTypography } from '../../Atoms/Typography/index';
 
 interface Props {
   title: string;

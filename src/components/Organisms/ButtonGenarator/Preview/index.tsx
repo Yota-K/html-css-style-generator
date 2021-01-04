@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+
 import styled from 'styled-components';
 
 import { AppContext } from '../../../Templates/CreateButtonView/index';
@@ -25,5 +26,9 @@ export const ButtonPreview = () => {
 const PreviewArea = styled.div`
   background: #f5f2f0;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 `;

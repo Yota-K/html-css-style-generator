@@ -1,7 +1,9 @@
-import Head from 'next/head';
 import React from 'react';
-import { AppHeader } from '../../Organisms/Header/index';
+
 import Container from '@material-ui/core/Container';
+import Head from 'next/head';
+
+import { AppHeader } from '../../Organisms/Header/index';
 import { CardDataProps } from '../../../../type';
 import { CardList } from '../../Organisms/CardList/index';
 
