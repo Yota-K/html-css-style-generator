@@ -7,6 +7,7 @@ export const CreateButtonPage = () => {
   return (
     <CreateView
       title="Style Generator"
+      description="HTML・CSSを書かずにボタンの作成をすることができるオンラインツールです。"
       pageTitle="Style Generator｜ボタンの作成"
       featureTitle="Button Genarator"
       cardData={cardData}

@@ -17,7 +17,7 @@ export const ButtonCodeView: React.FC<Props> = ({ htmlCode }) => {
 
   return (
     <>
-      <AppTypography variant="h2" text="コード" />
+      <AppTypography variant="h3" text="コード" />
       <CodeView>
         <CodeArea language="html" code={htmlCode} />
         <CodeArea language="css" code={cssCode} />

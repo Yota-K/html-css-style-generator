@@ -45,7 +45,7 @@ export const cardData: ButtonCardDataProps[] = [
       fontSize: 'font-size: 16px;',
       background: 'background: #46b574;',
       color: 'color: #fff;',
-      borderBottom: 'border-bottom: 4px solid #2581c4;',
+      borderBottom: 'border-bottom: 4px solid #12614d;',
       borderRadius: 'border-radius: 3px;',
     },
     activeStyles: {
@@ -62,7 +62,7 @@ export const cardData: ButtonCardDataProps[] = [
       fontSize: 'font-size: 16px;',
       background: 'background: #46b574;',
       color: 'color: #fff;',
-      borderBottom: 'border-bottom: 4px solid  #2581c4;',
+      borderBottom: 'border-bottom: 4px solid #12614d;',
     },
     activeStyles: {
       transform: 'transform: translateY(4px);',
@@ -99,6 +99,31 @@ export const cardData: ButtonCardDataProps[] = [
     hoverStyles: {
       background: 'background: orange;',
       color: 'color: #fff;',
+    },
+  },
+  {
+    heading: 'デザイン7',
+    defaultStyles: {
+      display: 'display: inline-block;',
+      textDecoration: 'text-decoration: none;',
+      padding: 'padding: 4px 12px;',
+      fontSize: 'font-size: 16px;',
+      background: 'background: #0069eb;',
+      color: 'color: #fff;',
+      borderRadius: 'border-radius: 30px;',
+    },
+  },
+  {
+    heading: 'デザイン8',
+    defaultStyles: {
+      display: 'display: inline-block;',
+      textDecoration: 'text-decoration: none;',
+      padding: 'padding: 4px 12px;',
+      fontSize: 'font-size: 16px;',
+      fontWeight: 'font-weight: bold;',
+      background: 'background: #e4f0ff;',
+      color: 'color: #0069eb;',
+      border: 'border: 2px dashed #67c5ff;',
     },
   },
 ];

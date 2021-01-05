@@ -22,5 +22,11 @@ const cardData: CardDataProps[] = [
 ];
 
 export const FrontPage = () => {
-  return <FrontView title="Style Generator" cardData={cardData} />;
+  return (
+    <FrontView
+      title="Style Generator"
+      description="HTML・CSSのスタイルを生成することができるウェブアプリケーションです。"
+      cardData={cardData}
+    />
+  );
 };

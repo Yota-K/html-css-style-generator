@@ -14,10 +14,11 @@ export const theme = createMuiTheme({
       fontSize: 30,
     },
     h2: {
-      fontSize: 20,
+      fontSize: 24,
+      fontWeight: 'bold',
     },
     h3: {
-      fontSize: 18,
+      fontSize: 20,
     },
     fontSize: 16,
   },

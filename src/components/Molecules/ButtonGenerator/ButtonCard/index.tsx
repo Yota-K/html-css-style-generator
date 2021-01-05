@@ -18,7 +18,9 @@ interface Props {
 export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles }) => {
   const { dispatch } = useContext(AppContext);
 
-  const changeStyle = () => {
+  const changeStyle = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+
     dispatch({
       type: 'GENERATE_STYLE',
       payload: {
