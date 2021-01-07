@@ -7,6 +7,7 @@ import { AppHeader } from '../../Organisms/Header/index';
 import { AppTypography } from '../../Atoms/Typography/index';
 import { ButtonCardList } from '../../Organisms/ButtonGenarator/ButtonCardList/index';
 import { ButtonCodeView } from '../../Organisms/ButtonGenarator/Codeview/index';
+import { ButtonEditView } from '../../Organisms/ButtonGenarator/EditView/index';
 import { ButtonPreview } from '../../Organisms/ButtonGenarator/Preview/index';
 import { ButtonCardDataProps } from '../../../../type/index';
 import { State, initialState, Action, reducer } from '../../../../reducers/ButtonGenerator/index';
@@ -44,6 +45,7 @@ export const CreateView: React.FC<Props> = ({ pageTitle, title, description, fea
       <Container>
         <AppTypography variant="h2" text={featureTitle} />
         <ButtonCardList cardData={cardData} />
+        <ButtonEditView />
         <ButtonPreview />
         <ButtonCodeView htmlCode={htmlCode} />
       </Container>
