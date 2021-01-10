@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const InputSlider: React.FC<Props> = ({ editType, styleSize, max }) => {
+export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max }) => {
   const classes = useStyles();
 
   // スライダーのメモリの部分
