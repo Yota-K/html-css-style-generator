@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -25,6 +25,29 @@ export const InputSlider: React.FC<Props> = ({ editType, styleSize }) => {
 
   const [value, setValue] = React.useState<number>(Number(styleSize));
   const { state, dispatch } = useContext(AppContext);
+
+  // valueが変更された時に再レンダリングを行う
+  useEffect(() => {
+    dispatch({
+      type: 'GENERATE_STYLE',
+      payload: {
+        defaultStyles: {
+          ...state.defaultStyles,
+          padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
+        },
+        hoverStyles: {
+          ...state.hoverStyles,
+        },
+        activeStyles: {
+          ...state.activeStyles,
+        },
+        customStyles: {
+          ...state.customStyles,
+          [editType]: value,
+        },
+      },
+    });
+  }, [value]);
 
   // スライダーを動かした時の動作
   const handleSliderChange = (event: any, newValue: number | number[]) => {
