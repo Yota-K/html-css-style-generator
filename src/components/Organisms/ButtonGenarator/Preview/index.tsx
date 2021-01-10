@@ -20,8 +20,8 @@ export const ButtonPreview = () => {
           activeStyles={state.activeStyles}
         />
       </PreviewArea>
-      <InputSlider editType="paddingX" styleSize={state.customStyles.paddingX} />
-      <InputSlider editType="paddingY" styleSize={state.customStyles.paddingY} />
+      <InputSlider editType="paddingX" styleSize={state.customStyles.paddingX} max={35} />
+      <InputSlider editType="paddingY" styleSize={state.customStyles.paddingY} max={75} />
     </>
   );
 };
@@ -33,5 +33,5 @@ const PreviewArea = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 180px;
 `;

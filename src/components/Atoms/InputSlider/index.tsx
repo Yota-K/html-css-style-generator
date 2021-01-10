@@ -9,6 +9,7 @@ import { AppContext } from '../../Templates/CreateButtonView/index';
 interface Props {
   editType: 'paddingX' | 'paddingY';
   styleSize: string;
+  max: number;
 }
 
 const useStyles = makeStyles({
@@ -20,9 +21,10 @@ const useStyles = makeStyles({
   },
 });
 
-export const InputSlider: React.FC<Props> = ({ editType, styleSize }) => {
+export const InputSlider: React.FC<Props> = ({ editType, styleSize, max }) => {
   const classes = useStyles();
 
+  // スライダーのメモリの部分
   const [value, setValue] = React.useState<number>(Number(styleSize));
   const { state, dispatch } = useContext(AppContext);
 
@@ -84,7 +86,7 @@ export const InputSlider: React.FC<Props> = ({ editType, styleSize }) => {
             onChange={handleSliderChange}
             onChangeCommitted={handleSliderChange}
             aria-labelledby="input-slider"
-            max={50}
+            max={max}
           />
         </Grid>
         <Grid item xs>
