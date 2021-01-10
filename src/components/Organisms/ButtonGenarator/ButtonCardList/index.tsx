@@ -23,6 +23,7 @@ export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
               defaultStyles={el.defaultStyles}
               hoverStyles={el.hoverStyles}
               activeStyles={el.activeStyles}
+              customStyles={el.customStyles}
             />
           ))}
         </div>

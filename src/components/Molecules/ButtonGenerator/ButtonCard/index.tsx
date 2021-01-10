@@ -13,9 +13,10 @@ interface Props {
   defaultStyles: ButtonCardDataProps['defaultStyles'];
   hoverStyles?: ButtonCardDataProps['hoverStyles'];
   activeStyles?: ButtonCardDataProps['activeStyles'];
+  customStyles: ButtonCardDataProps['customStyles'];
 }
 
-export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles }) => {
+export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles, customStyles }) => {
   const { dispatch } = useContext(AppContext);
 
   const changeStyle = (e: React.MouseEvent<HTMLElement>) => {
@@ -27,6 +28,7 @@ export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyle
         defaultStyles: defaultStyles,
         hoverStyles: hoverStyles,
         activeStyles: activeStyles,
+        customStyles: customStyles,
       },
     });
   };
