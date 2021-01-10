@@ -21,6 +21,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '3',
     },
   },
   {
@@ -42,6 +43,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '0',
     },
   },
   {
@@ -63,6 +65,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '3',
     },
   },
   {
@@ -83,6 +86,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '0',
     },
   },
   {
@@ -100,6 +104,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '3',
     },
   },
   {
@@ -123,6 +128,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '0',
     },
   },
   {
@@ -139,6 +145,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '30',
     },
   },
   {
@@ -156,6 +163,7 @@ export const cardData: ButtonCardDataProps[] = [
     customStyles: {
       paddingX: '4',
       paddingY: '12',
+      borderRadius: '0',
     },
   },
 ];

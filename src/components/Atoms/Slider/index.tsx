@@ -5,9 +5,10 @@ import Grid from '@material-ui/core/Grid';
 import Slider from '@material-ui/core/Slider';
 
 import { AppContext } from '../../Templates/CreateButtonView/index';
+import { EditType } from '../../../../type/index';
 
 interface Props {
-  editType: 'paddingX' | 'paddingY';
+  editType: EditType;
   styleSize: string;
   max: number;
 }
@@ -36,6 +37,7 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
         defaultStyles: {
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
         },
         hoverStyles: state.hoverStyles,
         activeStyles: state.activeStyles,
@@ -58,6 +60,7 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
         defaultStyles: {
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
         },
         hoverStyles: state.hoverStyles,
         activeStyles: state.activeStyles,
