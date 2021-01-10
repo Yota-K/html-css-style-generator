@@ -19,8 +19,8 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #fff;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -40,8 +40,8 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #fff;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -61,8 +61,8 @@ export const cardData: ButtonCardDataProps[] = [
       borderBottom: 'border-bottom: none;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -81,8 +81,8 @@ export const cardData: ButtonCardDataProps[] = [
       borderBottom: 'border-bottom: none;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -98,8 +98,8 @@ export const cardData: ButtonCardDataProps[] = [
       transition: 'transition: .4s;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -121,8 +121,8 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #fff;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -137,8 +137,8 @@ export const cardData: ButtonCardDataProps[] = [
       borderRadius: 'border-radius: 30px;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
   {
@@ -154,8 +154,8 @@ export const cardData: ButtonCardDataProps[] = [
       border: 'border: 2px dashed #67c5ff;',
     },
     customStyles: {
-      paddingX: 0,
-      paddingY: 0,
+      paddingX: '4',
+      paddingY: '12',
     },
   },
 ];

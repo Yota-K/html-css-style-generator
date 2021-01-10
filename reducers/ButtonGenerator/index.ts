@@ -21,8 +21,8 @@ export const initialState: State = {
     color: 'color: #fff;',
   },
   customStyles: {
-    paddingX: 0,
-    paddingY: 0,
+    paddingX: '4',
+    paddingY: '12',
   },
 };
 
@@ -32,7 +32,7 @@ export type Action = {
     defaultStyles: State['defaultStyles'];
     hoverStyles?: State['hoverStyles'];
     activeStyles?: State['activeStyles'];
-    customStyles?: State['customStyles'];
+    customStyles: State['customStyles'];
   };
 };
 
