@@ -23,6 +23,7 @@ export const initialState: State = {
   customStyles: {
     paddingX: '4',
     paddingY: '12',
+    borderRadius: '3',
   },
 };
 

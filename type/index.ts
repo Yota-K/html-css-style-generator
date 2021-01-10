@@ -39,5 +39,6 @@ export interface ButtonCardDataProps {
   customStyles: {
     paddingX: string;
     paddingY: string;
+    borderRadius: string;
   };
 }
