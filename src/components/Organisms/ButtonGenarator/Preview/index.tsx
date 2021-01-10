@@ -30,5 +30,5 @@ const PreviewArea = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 180px;
 `;

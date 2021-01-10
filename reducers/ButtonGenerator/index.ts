@@ -2,7 +2,7 @@ import { ButtonCardDataProps } from '../../type/index';
 
 // 型TからKのプロパティを含む新しい型を生成する
 // type Pick<T, K extends keyof T>
-export type State = Pick<ButtonCardDataProps, 'defaultStyles' | 'hoverStyles' | 'activeStyles'>;
+export type State = Pick<ButtonCardDataProps, 'defaultStyles' | 'hoverStyles' | 'activeStyles' | 'customStyles'>;
 
 export const initialState: State = {
   defaultStyles: {
@@ -20,6 +20,10 @@ export const initialState: State = {
     background: 'background: #67c5ff;',
     color: 'color: #fff;',
   },
+  customStyles: {
+    paddingX: '4',
+    paddingY: '12',
+  },
 };
 
 export type Action = {
@@ -28,6 +32,7 @@ export type Action = {
     defaultStyles: State['defaultStyles'];
     hoverStyles?: State['hoverStyles'];
     activeStyles?: State['activeStyles'];
+    customStyles: State['customStyles'];
   };
 };
 
@@ -38,6 +43,7 @@ export const reducer = (state: State, action: Action) => {
       defaultStyles: action.payload.defaultStyles,
       hoverStyles: action.payload.hoverStyles,
       activeStyles: action.payload.activeStyles,
+      customStyles: action.payload.customStyles,
     };
   } else {
     return state;

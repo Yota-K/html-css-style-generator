@@ -13,10 +13,11 @@ interface Props {
   defaultStyles: ButtonCardDataProps['defaultStyles'];
   hoverStyles?: ButtonCardDataProps['hoverStyles'];
   activeStyles?: ButtonCardDataProps['activeStyles'];
+  customStyles: ButtonCardDataProps['customStyles'];
 }
 
-export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles }) => {
-  const { dispatch } = useContext(AppContext);
+export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles, customStyles }) => {
+  const { state, dispatch } = useContext(AppContext);
 
   const changeStyle = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -27,6 +28,11 @@ export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyle
         defaultStyles: defaultStyles,
         hoverStyles: hoverStyles,
         activeStyles: activeStyles,
+        // ボタンを選択した後に追加したスタイルを初期化する
+        customStyles: {
+          paddingX: '4',
+          paddingY: '12',
+        },
       },
     });
   };
