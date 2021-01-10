@@ -42,9 +42,9 @@ export const reducer = (state: State, action: Action) => {
     return {
       ...state,
       styleObj: action.payload.styleObj,
-      hoverStyles: action.payload.hoverStyle,
-      activeStyles: action.payload.activeStyle,
-      customStyles: action.payload.customStyle,
+      hoverStyle: action.payload.hoverStyle,
+      activeStyle: action.payload.activeStyle,
+      customStyle: action.payload.customStyle,
     };
   } else {
     return state;
