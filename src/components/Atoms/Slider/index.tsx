@@ -37,12 +37,8 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
         },
-        hoverStyles: {
-          ...state.hoverStyles,
-        },
-        activeStyles: {
-          ...state.activeStyles,
-        },
+        hoverStyles: state.hoverStyles,
+        activeStyles: state.activeStyles,
         customStyles: {
           ...state.customStyles,
           [editType]: value,
@@ -63,12 +59,8 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
         },
-        hoverStyles: {
-          ...state.hoverStyles,
-        },
-        activeStyles: {
-          ...state.activeStyles,
-        },
+        hoverStyles: state.hoverStyles,
+        activeStyles: state.activeStyles,
         customStyles: {
           ...state.customStyles,
           [editType]: convertString,
