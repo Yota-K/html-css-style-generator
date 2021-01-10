@@ -18,6 +18,10 @@ export const cardData: ButtonCardDataProps[] = [
       background: 'background: #67c5ff;',
       color: 'color: #fff;',
     },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
+    },
   },
   {
     heading: 'デザイン2',
@@ -34,6 +38,10 @@ export const cardData: ButtonCardDataProps[] = [
     hoverStyles: {
       background: 'background: #67c5ff;',
       color: 'color: #fff;',
+    },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
     },
   },
   {
@@ -52,6 +60,10 @@ export const cardData: ButtonCardDataProps[] = [
       transform: 'transform: translateY(4px);',
       borderBottom: 'border-bottom: none;',
     },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
+    },
   },
   {
     heading: 'デザイン4',
@@ -68,6 +80,10 @@ export const cardData: ButtonCardDataProps[] = [
       transform: 'transform: translateY(4px);',
       borderBottom: 'border-bottom: none;',
     },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
+    },
   },
   {
     heading: 'デザイン5',
@@ -80,6 +96,10 @@ export const cardData: ButtonCardDataProps[] = [
       border: 'border: 4px double orange;',
       borderRadius: 'border-radius: 3px;',
       transition: 'transition: .4s;',
+    },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
     },
   },
   {
@@ -100,6 +120,10 @@ export const cardData: ButtonCardDataProps[] = [
       background: 'background: orange;',
       color: 'color: #fff;',
     },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
+    },
   },
   {
     heading: 'デザイン7',
@@ -111,6 +135,10 @@ export const cardData: ButtonCardDataProps[] = [
       background: 'background: #0069eb;',
       color: 'color: #fff;',
       borderRadius: 'border-radius: 30px;',
+    },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
     },
   },
   {
@@ -124,6 +152,10 @@ export const cardData: ButtonCardDataProps[] = [
       background: 'background: #e4f0ff;',
       color: 'color: #0069eb;',
       border: 'border: 2px dashed #67c5ff;',
+    },
+    customStyles: {
+      paddingX: 0,
+      paddingY: 0,
     },
   },
 ];

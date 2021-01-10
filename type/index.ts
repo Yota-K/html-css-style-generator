@@ -36,4 +36,8 @@ export interface ButtonCardDataProps {
     transform?: string;
     borderBottom?: string;
   };
+  customStyles: {
+    paddingX?: number;
+    paddingY?: number;
+  };
 }
