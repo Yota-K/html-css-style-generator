@@ -42,3 +42,6 @@ export interface ButtonCardDataProps {
     borderRadius: string;
   };
 }
+
+// 編集を行うスタイルの種類の型
+export type EditType = 'paddingX' | 'paddingY' | 'borderRadius';
