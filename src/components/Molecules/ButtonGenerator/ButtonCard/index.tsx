@@ -17,7 +17,7 @@ interface Props {
 }
 
 export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles, customStyles }) => {
-  const { state, dispatch } = useContext(AppContext);
+  const { dispatch } = useContext(AppContext);
 
   const changeStyle = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyle
         customStyles: {
           paddingX: '4',
           paddingY: '12',
+          borderRadius: customStyles.borderRadius,
         },
       },
     });

@@ -37,6 +37,7 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
         defaultStyles: {
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
         },
         hoverStyles: state.hoverStyles,
         activeStyles: state.activeStyles,
@@ -59,6 +60,7 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
         defaultStyles: {
           ...state.defaultStyles,
           padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
         },
         hoverStyles: state.hoverStyles,
         activeStyles: state.activeStyles,

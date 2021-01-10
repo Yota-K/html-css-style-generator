@@ -37,6 +37,11 @@ export const ButtonEditView = () => {
         <Grid className={classes.edit} item>
           <Edit text="padding (Left, Right)" editType="paddingY" styleSize={state.customStyles.paddingY} max={75} />
         </Grid>
+        <Grid className={classes.editArea} container>
+          <Grid className={classes.edit} item>
+            <Edit text="border-radius" editType="borderRadius" styleSize={state.customStyles.borderRadius} max={40} />
+          </Grid>
+        </Grid>
       </Grid>
     </>
   );
