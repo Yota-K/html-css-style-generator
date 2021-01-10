@@ -56,7 +56,13 @@ export const InputSlider: React.FC<Props> = ({ editType, styleSize }) => {
     <div className={classes.root}>
       <Grid container spacing={2} alignItems="center">
         <Grid item xs>
-          <Slider value={value} onChange={handleSliderChange} aria-labelledby="input-slider" max={50} />
+          <Slider
+            value={value}
+            onChange={handleSliderChange}
+            onChangeCommitted={handleSliderChange}
+            aria-labelledby="input-slider"
+            max={50}
+          />
         </Grid>
         <Grid item xs>
           {`${styleSize} px`}
