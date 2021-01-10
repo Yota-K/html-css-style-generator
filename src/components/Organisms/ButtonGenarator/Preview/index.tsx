@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { AppContext } from '../../../Templates/CreateButtonView/index';
 import { AppTypography } from '../../../Atoms/Typography/index';
 import { GenerateButton } from '../../../Atoms/ButtonGenerator/Button/index';
-import { StyleChangeSlider } from '../../../Atoms/Slider/index';
 
 export const ButtonPreview = () => {
   const { state } = useContext(AppContext);
@@ -20,8 +19,6 @@ export const ButtonPreview = () => {
           activeStyles={state.activeStyles}
         />
       </PreviewArea>
-      <StyleChangeSlider editType="paddingX" styleSize={state.customStyles.paddingX} max={35} />
-      <StyleChangeSlider editType="paddingY" styleSize={state.customStyles.paddingY} max={75} />
     </>
   );
 };
