@@ -20,10 +20,10 @@ export const ButtonCardList: React.FC<Props> = ({ cardData }) => {
             <ButtonCard
               key={i}
               heading={el.heading}
-              defaultStyles={el.defaultStyles}
-              hoverStyles={el.hoverStyles}
-              activeStyles={el.activeStyles}
-              customStyles={el.customStyles}
+              styleObj={el.styleObj}
+              hoverStyle={el.hoverStyle}
+              activeStyle={el.activeStyle}
+              customStyle={el.customStyle}
             />
           ))}
         </div>

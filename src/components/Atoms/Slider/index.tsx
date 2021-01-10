@@ -34,15 +34,15 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
     dispatch({
       type: 'GENERATE_STYLE',
       payload: {
-        defaultStyles: {
-          ...state.defaultStyles,
-          padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
-          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
+        styleObj: {
+          ...state.styleObj,
+          padding: `padding: ${state.customStyle.paddingX}px ${state.customStyle.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyle.borderRadius}px;`,
         },
-        hoverStyles: state.hoverStyles,
-        activeStyles: state.activeStyles,
-        customStyles: {
-          ...state.customStyles,
+        hoverStyle: state.hoverStyle,
+        activeStyle: state.activeStyle,
+        customStyle: {
+          ...state.customStyle,
           [editType]: value,
         },
       },
@@ -57,15 +57,15 @@ export const StyleChangeSlider: React.FC<Props> = ({ editType, styleSize, max })
     dispatch({
       type: 'GENERATE_STYLE',
       payload: {
-        defaultStyles: {
-          ...state.defaultStyles,
-          padding: `padding: ${state.customStyles.paddingX}px ${state.customStyles.paddingY}px;`,
-          borderRadius: `border-radius: ${state.customStyles.borderRadius}px;`,
+        styleObj: {
+          ...state.styleObj,
+          padding: `padding: ${state.customStyle.paddingX}px ${state.customStyle.paddingY}px;`,
+          borderRadius: `border-radius: ${state.customStyle.borderRadius}px;`,
         },
-        hoverStyles: state.hoverStyles,
-        activeStyles: state.activeStyles,
-        customStyles: {
-          ...state.customStyles,
+        hoverStyle: state.hoverStyle,
+        activeStyle: state.activeStyle,
+        customStyle: {
+          ...state.customStyle,
           [editType]: convertString,
         },
       },

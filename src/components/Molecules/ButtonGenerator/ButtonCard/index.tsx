@@ -10,13 +10,13 @@ import { GenerateButton } from '../../../Atoms/ButtonGenerator/Button/index';
 
 interface Props {
   heading: ButtonCardDataProps['heading'];
-  defaultStyles: ButtonCardDataProps['defaultStyles'];
-  hoverStyles?: ButtonCardDataProps['hoverStyles'];
-  activeStyles?: ButtonCardDataProps['activeStyles'];
-  customStyles: ButtonCardDataProps['customStyles'];
+  styleObj: ButtonCardDataProps['styleObj'];
+  hoverStyle?: ButtonCardDataProps['hoverStyle'];
+  activeStyle?: ButtonCardDataProps['activeStyle'];
+  customStyle: ButtonCardDataProps['customStyle'];
 }
 
-export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyles, activeStyles, customStyles }) => {
+export const ButtonCard: React.FC<Props> = ({ heading, styleObj, hoverStyle, activeStyle, customStyle }) => {
   const { dispatch } = useContext(AppContext);
 
   const changeStyle = (e: React.MouseEvent<HTMLElement>) => {
@@ -25,14 +25,14 @@ export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyle
     dispatch({
       type: 'GENERATE_STYLE',
       payload: {
-        defaultStyles: defaultStyles,
-        hoverStyles: hoverStyles,
-        activeStyles: activeStyles,
+        styleObj: styleObj,
+        hoverStyle: hoverStyle,
+        activeStyle: activeStyle,
         // ボタンを選択した後に追加したスタイルを初期化する
-        customStyles: {
+        customStyle: {
           paddingX: '4',
           paddingY: '12',
-          borderRadius: customStyles.borderRadius,
+          borderRadius: customStyle.borderRadius,
         },
       },
     });
@@ -42,7 +42,7 @@ export const ButtonCard: React.FC<Props> = ({ heading, defaultStyles, hoverStyle
     <Card onClick={changeStyle}>
       <CardContent>
         <CardHeading heading={heading} />
-        <GenerateButton defaultStyles={defaultStyles} hoverStyles={hoverStyles} activeStyles={activeStyles} />
+        <GenerateButton styleObj={styleObj} hoverStyle={hoverStyle} activeStyle={activeStyle} />
       </CardContent>
     </Card>
   );

@@ -4,12 +4,12 @@ import { Button } from './style';
 import { ButtonCardDataProps } from '../../../../../type/index';
 
 export interface Props {
-  defaultStyles: ButtonCardDataProps['defaultStyles'];
-  hoverStyles?: ButtonCardDataProps['hoverStyles'];
-  activeStyles?: ButtonCardDataProps['activeStyles'];
+  styleObj: ButtonCardDataProps['styleObj'];
+  hoverStyle?: ButtonCardDataProps['hoverStyle'];
+  activeStyle?: ButtonCardDataProps['activeStyle'];
 }
 
-export const GenerateButton: React.FC<Props> = ({ defaultStyles, hoverStyles, activeStyles }) => {
+export const GenerateButton: React.FC<Props> = ({ styleObj, hoverStyle, activeStyle }) => {
   const buttonClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
   };
@@ -19,9 +19,9 @@ export const GenerateButton: React.FC<Props> = ({ defaultStyles, hoverStyles, ac
       onClick={buttonClick}
       className="button-style"
       href="#"
-      defaultStyles={defaultStyles}
-      hoverStyles={hoverStyles}
-      activeStyles={activeStyles}
+      styleObj={styleObj}
+      hoverStyle={hoverStyle}
+      activeStyle={activeStyle}
     >
       ボタン
     </Button>

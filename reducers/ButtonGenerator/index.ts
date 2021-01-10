@@ -41,7 +41,7 @@ export const reducer = (state: State, action: Action) => {
   if (action.type) {
     return {
       ...state,
-      defaultStyles: action.payload.styleObj,
+      styleObj: action.payload.styleObj,
       hoverStyles: action.payload.hoverStyle,
       activeStyles: action.payload.activeStyle,
       customStyles: action.payload.customStyle,

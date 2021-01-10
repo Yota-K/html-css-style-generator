@@ -3,28 +3,28 @@ import styled from 'styled-components';
 import { Props } from './index';
 
 export const Button = styled.a<Props>`
-  ${(props) => props.defaultStyles.display}
-  ${(props) => props.defaultStyles.textDecoration}
-  ${(props) => props.defaultStyles.padding}
-  ${(props) => props.defaultStyles.fontSize}
-  ${(props) => (props.defaultStyles.fontWeight ? props.defaultStyles.fontWeight : '')}
-  ${(props) => (props.defaultStyles.background ? props.defaultStyles.background : '')}
-  ${(props) => (props.defaultStyles.color ? props.defaultStyles.color : '')}
-  ${(props) => (props.defaultStyles.border ? props.defaultStyles.border : '')}
-  ${(props) => (props.defaultStyles.borderTop ? props.defaultStyles.borderTop : '')}
-  ${(props) => (props.defaultStyles.borderBottom ? props.defaultStyles.borderBottom : '')}
-  ${(props) => (props.defaultStyles.borderLeft ? props.defaultStyles.borderLeft : '')}
-  ${(props) => (props.defaultStyles.borderRight ? props.defaultStyles.borderRight : '')}
-  ${(props) => (props.defaultStyles.borderRadius ? props.defaultStyles.borderRadius : '')}
-  ${(props) => (props.defaultStyles.transition ? props.defaultStyles.transition : '')}
+  ${(props) => props.styleObj.display}
+  ${(props) => props.styleObj.textDecoration}
+  ${(props) => props.styleObj.padding}
+  ${(props) => props.styleObj.fontSize}
+  ${(props) => (props.styleObj.fontWeight ? props.styleObj.fontWeight : '')}
+  ${(props) => (props.styleObj.background ? props.styleObj.background : '')}
+  ${(props) => (props.styleObj.color ? props.styleObj.color : '')}
+  ${(props) => (props.styleObj.border ? props.styleObj.border : '')}
+  ${(props) => (props.styleObj.borderTop ? props.styleObj.borderTop : '')}
+  ${(props) => (props.styleObj.borderBottom ? props.styleObj.borderBottom : '')}
+  ${(props) => (props.styleObj.borderLeft ? props.styleObj.borderLeft : '')}
+  ${(props) => (props.styleObj.borderRight ? props.styleObj.borderRight : '')}
+  ${(props) => (props.styleObj.borderRadius ? props.styleObj.borderRadius : '')}
+  ${(props) => (props.styleObj.transition ? props.styleObj.transition : '')}
 
   &:hover {
-    ${(props) => (props.hoverStyles?.background ? props.hoverStyles.background : '')}
-    ${(props) => (props.hoverStyles?.color ? props.hoverStyles.color : '')}
+    ${(props) => (props.hoverStyle?.background ? props.hoverStyle.background : '')}
+    ${(props) => (props.hoverStyle?.color ? props.hoverStyle.color : '')}
   }
 
   &:active {
-    ${(props) => (props.activeStyles?.transform ? props.activeStyles.transform : '')}
-    ${(props) => (props.activeStyles?.borderBottom ? props.activeStyles.borderBottom : '')}
+    ${(props) => (props.activeStyle?.transform ? props.activeStyle.transform : '')}
+    ${(props) => (props.activeStyle?.borderBottom ? props.activeStyle.borderBottom : '')}
   }
 `;

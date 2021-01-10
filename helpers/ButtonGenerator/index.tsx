@@ -2,33 +2,33 @@ import { State } from '../../reducers/ButtonGenerator/index';
 
 // スタイルの生成
 export const styleGenerate = (state: State) => {
-  if (state.defaultStyles && state.hoverStyles) {
-    const defaultStyles = replaceStr(state.defaultStyles);
-    const hoverStyles = replaceStr(state.hoverStyles);
+  if (state.styleObj && state.hoverStyle) {
+    const style = replaceStr(state.styleObj);
+    const hoverStyle = replaceStr(state.hoverStyle);
 
     return `.button-style {
-${defaultStyles}}
+${style}}
 
 .button-style:hover {
-${hoverStyles}}`;
-  } else if (state.defaultStyles && state.activeStyles) {
-    const style = replaceStr(state.defaultStyles);
-    const activeStyles = replaceStr(state.activeStyles);
+${hoverStyle}}`;
+  } else if (state.styleObj && state.activeStyle) {
+    const style = replaceStr(state.styleObj);
+    const activeStyle = replaceStr(state.activeStyle);
 
     return `.button-style {
 ${style}}
 
 .button-style:active {
-${activeStyles}}`;
+${activeStyle}}`;
   } else {
-    const style = replaceStr(state.defaultStyles);
+    const style = replaceStr(state.styleObj);
 
     return `.button-style {
 ${style}}`;
   }
 };
 
-type ObjType = State['defaultStyles'] | State['hoverStyles'] | State['activeStyles'];
+type ObjType = State['styleObj'] | State['hoverStyle'] | State['activeStyle'];
 
 // 文字列の整形
 const replaceStr = (obj: ObjType) => {
