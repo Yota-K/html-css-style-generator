@@ -10,7 +10,7 @@ export interface CardDataProps {
 // Buttonのスタイルの型
 export interface ButtonCardDataProps {
   heading: string;
-  defaultStyles: {
+  styleObj: {
     display?: string;
     textDecoration?: string;
     padding?: string;
@@ -27,16 +27,16 @@ export interface ButtonCardDataProps {
     boxShadow?: string;
     transition?: string;
   };
-  hoverStyles?: {
+  hoverStyle?: {
     background?: string;
     color?: string;
     transition?: string;
   };
-  activeStyles?: {
+  activeStyle?: {
     transform?: string;
     borderBottom?: string;
   };
-  customStyles: {
+  customStyle: {
     paddingX: string;
     paddingY: string;
     borderRadius: string;

@@ -34,17 +34,17 @@ export const ButtonEditView = () => {
       <AppTypography variant="h4" text="padding" />
       <Grid className={classes.editArea} container>
         <Grid className={classes.edit} item>
-          <Edit text="padding (Top, Bottom)" editType="paddingX" styleSize={state.customStyles.paddingX} max={35} />
+          <Edit text="padding (Top, Bottom)" editType="paddingX" styleSize={state.customStyle.paddingX} max={35} />
         </Grid>
         <Grid className={classes.edit} item>
-          <Edit text="padding (Left, Right)" editType="paddingY" styleSize={state.customStyles.paddingY} max={75} />
+          <Edit text="padding (Left, Right)" editType="paddingY" styleSize={state.customStyle.paddingY} max={75} />
         </Grid>
       </Grid>
 
       <AppTypography variant="h4" text="border" />
       <Grid className={classes.editArea} container>
         <Grid className={classes.edit} item>
-          <Edit text="border-radius" editType="borderRadius" styleSize={state.customStyles.borderRadius} max={40} />
+          <Edit text="border-radius" editType="borderRadius" styleSize={state.customStyle.borderRadius} max={40} />
         </Grid>
       </Grid>
     </>

@@ -2,10 +2,10 @@ import { ButtonCardDataProps } from '../../type/index';
 
 // 型TからKのプロパティを含む新しい型を生成する
 // type Pick<T, K extends keyof T>
-export type State = Pick<ButtonCardDataProps, 'defaultStyles' | 'hoverStyles' | 'activeStyles' | 'customStyles'>;
+export type State = Pick<ButtonCardDataProps, 'styleObj' | 'hoverStyle' | 'activeStyle' | 'customStyle'>;
 
 export const initialState: State = {
-  defaultStyles: {
+  styleObj: {
     display: 'display: inline-block;',
     textDecoration: 'text-decoration: none;',
     padding: 'padding: 4px 12px;',
@@ -16,11 +16,11 @@ export const initialState: State = {
     borderRadius: 'border-radius: 3px;',
     transition: 'transition: .4s;',
   },
-  hoverStyles: {
+  hoverStyle: {
     background: 'background: #67c5ff;',
     color: 'color: #fff;',
   },
-  customStyles: {
+  customStyle: {
     paddingX: '4',
     paddingY: '12',
     borderRadius: '3',
@@ -30,10 +30,10 @@ export const initialState: State = {
 export type Action = {
   type: 'GENERATE_STYLE';
   payload: {
-    defaultStyles: State['defaultStyles'];
-    hoverStyles?: State['hoverStyles'];
-    activeStyles?: State['activeStyles'];
-    customStyles: State['customStyles'];
+    styleObj: State['styleObj'];
+    hoverStyle?: State['hoverStyle'];
+    activeStyle?: State['activeStyle'];
+    customStyle: State['customStyle'];
   };
 };
 
@@ -41,10 +41,10 @@ export const reducer = (state: State, action: Action) => {
   if (action.type) {
     return {
       ...state,
-      defaultStyles: action.payload.defaultStyles,
-      hoverStyles: action.payload.hoverStyles,
-      activeStyles: action.payload.activeStyles,
-      customStyles: action.payload.customStyles,
+      styleObj: action.payload.styleObj,
+      hoverStyle: action.payload.hoverStyle,
+      activeStyle: action.payload.activeStyle,
+      customStyle: action.payload.customStyle,
     };
   } else {
     return state;

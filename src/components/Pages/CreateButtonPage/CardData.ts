@@ -3,7 +3,7 @@ import { ButtonCardDataProps } from '../../../../type/index';
 export const cardData: ButtonCardDataProps[] = [
   {
     heading: 'デザイン1',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -14,11 +14,11 @@ export const cardData: ButtonCardDataProps[] = [
       borderRadius: 'border-radius: 3px;',
       transition: 'transition: .4s;',
     },
-    hoverStyles: {
+    hoverStyle: {
       background: 'background: #67c5ff;',
       color: 'color: #fff;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '3',
@@ -26,7 +26,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン2',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -36,11 +36,11 @@ export const cardData: ButtonCardDataProps[] = [
       border: 'border: 2px solid #67c5ff;',
       transition: 'transition: .4s;',
     },
-    hoverStyles: {
+    hoverStyle: {
       background: 'background: #67c5ff;',
       color: 'color: #fff;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '0',
@@ -48,7 +48,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン3',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -58,11 +58,11 @@ export const cardData: ButtonCardDataProps[] = [
       borderBottom: 'border-bottom: 4px solid #12614d;',
       borderRadius: 'border-radius: 3px;',
     },
-    activeStyles: {
+    activeStyle: {
       transform: 'transform: translateY(4px);',
       borderBottom: 'border-bottom: none;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '3',
@@ -70,7 +70,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン4',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -79,11 +79,11 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #fff;',
       borderBottom: 'border-bottom: 4px solid #12614d;',
     },
-    activeStyles: {
+    activeStyle: {
       transform: 'transform: translateY(4px);',
       borderBottom: 'border-bottom: none;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '0',
@@ -91,7 +91,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン5',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -101,7 +101,7 @@ export const cardData: ButtonCardDataProps[] = [
       borderRadius: 'border-radius: 3px;',
       transition: 'transition: .4s;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '3',
@@ -109,7 +109,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン6',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -121,11 +121,11 @@ export const cardData: ButtonCardDataProps[] = [
       borderRight: 'border-right: 4px solid orange;',
       transition: 'transition: .4s;',
     },
-    hoverStyles: {
+    hoverStyle: {
       background: 'background: orange;',
       color: 'color: #fff;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '0',
@@ -133,7 +133,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン7',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -142,7 +142,7 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #fff;',
       borderRadius: 'border-radius: 30px;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '30',
@@ -150,7 +150,7 @@ export const cardData: ButtonCardDataProps[] = [
   },
   {
     heading: 'デザイン8',
-    defaultStyles: {
+    styleObj: {
       display: 'display: inline-block;',
       textDecoration: 'text-decoration: none;',
       padding: 'padding: 4px 12px;',
@@ -160,7 +160,7 @@ export const cardData: ButtonCardDataProps[] = [
       color: 'color: #0069eb;',
       border: 'border: 2px dashed #67c5ff;',
     },
-    customStyles: {
+    customStyle: {
       paddingX: '4',
       paddingY: '12',
       borderRadius: '0',
