@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -38,12 +38,19 @@ export const ButtonCard: React.FC<Props> = ({ heading, styleObj, hoverStyle, act
     });
   };
 
-  return (
-    <Card onClick={changeStyle}>
-      <CardContent>
-        <CardHeading heading={heading} />
-        <GenerateButton styleObj={styleObj} hoverStyle={hoverStyle} activeStyle={activeStyle} />
-      </CardContent>
-    </Card>
-  );
+  // MEMO: useMemo
+  // 値のメモ化（何度やっても結果が同じ場合の値などを保存する）を行い、
+  // そこから値の再取得を行うことができるhook
+  // 第2引数の配列の中の値が変更された時のみ処理を行う
+  // 空配列を渡すと、1回のみ実行される
+  return useMemo(() => {
+    return (
+      <Card onClick={changeStyle}>
+        <CardContent>
+          <CardHeading heading={heading} />
+          <GenerateButton styleObj={styleObj} hoverStyle={hoverStyle} activeStyle={activeStyle} />
+        </CardContent>
+      </Card>
+    );
+  }, []);
 };
