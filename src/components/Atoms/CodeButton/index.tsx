@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import Alert from '@material-ui/lab/Alert';
 import CodeIcon from '@material-ui/icons/Code';
@@ -32,25 +32,27 @@ export const CodeButton: React.FC<Props> = ({ code }) => {
     setState({ ...state, open: false });
   };
 
-  return (
-    <>
-      <Snackbar
-        open={state.open}
-        anchorOrigin={{
-          vertical: state.vertical,
-          horizontal: state.horizontal,
-        }}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        message="Note archived"
-      >
-        <Alert severity="success">コードをコピーしました！</Alert>
-      </Snackbar>
-      <IconButton>
-        <Tooltip title="Copy" placement="left">
-          <CodeIcon onClick={handleClick} />
-        </Tooltip>
-      </IconButton>
-    </>
-  );
+  return useMemo(() => {
+    return (
+      <>
+        <Snackbar
+          open={state.open}
+          anchorOrigin={{
+            vertical: state.vertical,
+            horizontal: state.horizontal,
+          }}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message="Note archived"
+        >
+          <Alert severity="success">コードをコピーしました！</Alert>
+        </Snackbar>
+        <IconButton>
+          <Tooltip title="Copy" placement="left">
+            <CodeIcon onClick={handleClick} />
+          </Tooltip>
+        </IconButton>
+      </>
+    );
+  }, [state.open]);
 };
