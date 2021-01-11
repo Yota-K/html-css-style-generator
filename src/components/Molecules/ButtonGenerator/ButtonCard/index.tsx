@@ -30,8 +30,8 @@ export const ButtonCard: React.FC<Props> = ({ heading, styleObj, hoverStyle, act
         activeStyle: activeStyle,
         // ボタンを選択した後に追加したスタイルを初期化する
         customStyle: {
-          paddingX: '4',
-          paddingY: '12',
+          paddingX: customStyle.paddingX,
+          paddingY: customStyle.paddingY,
           borderRadius: customStyle.borderRadius,
         },
       },
