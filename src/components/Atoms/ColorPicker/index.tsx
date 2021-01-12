@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import { ChromePicker } from 'react-color'
 
-export const ColorPicker: React.FC = () => {
+interface Props {
+  currentColor: string;
+}
+
+export const ColorPicker: React.FC<Props> = ({ currentColor }) => {
   const [displayColorPicker, setDisplayColorPicker] = React.useState<boolean>(false);
 
   const handleClick = () => {
@@ -16,7 +20,7 @@ export const ColorPicker: React.FC = () => {
 
   return (
     <>
-      <PickColor onClick={handleClick}>BG</PickColor>
+      <PickColor currentColor={currentColor} onClick={handleClick}></PickColor>
       {displayColorPicker ? (
         <div onClick={handleClose}>
           <ChromePicker />
@@ -26,8 +30,16 @@ export const ColorPicker: React.FC = () => {
   );
 };
 
-const PickColor = styled.span`
-  background: red;
+type styleType = {
+  currentColor: string;
+};
+
+const PickColor = styled.span<styleType>`
+  display: inline-block;
+  background: ${(props) => props.currentColor};
   width: 30px;
   height: 30px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  margin: 0 5px;
+  cursor: pointer;
 `;

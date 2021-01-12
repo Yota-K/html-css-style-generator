@@ -15,7 +15,7 @@ export const ButtonPreview = () => {
       <AppTypography variant="h3" text="プレビュー" />
       <PreviewArea>
         <GenerateButton styleObj={state.styleObj} hoverStyle={state.hoverStyle} activeStyle={state.activeStyle} />
-        <ColorSelectArea />
+        <ColorSelectArea state={state} />
       </PreviewArea>
     </>
   );
