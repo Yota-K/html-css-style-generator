@@ -40,8 +40,10 @@ export interface ButtonCardDataProps {
     paddingX: string;
     paddingY: string;
     borderRadius: string;
+    background: string;
+    color: string;
   };
 }
 
 // 編集を行うスタイルの種類の型
-export type EditType = 'paddingX' | 'paddingY' | 'borderRadius';
+export type EditType = Pick<ButtonCardDataProps, 'customStyle'>;
