@@ -7,7 +7,7 @@ import Slider from '@material-ui/core/Slider';
 import { AppContext } from '../../Templates/CreateButtonView/index';
 
 interface Props {
-  editType: 'paddingX' | 'paddingY';
+  editType: 'paddingX' | 'paddingY' | 'borderRadius';
   styleSize: string;
   max: number;
 }
