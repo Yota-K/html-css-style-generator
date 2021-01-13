@@ -22,6 +22,7 @@ export const ButtonPreview = () => {
 };
 
 const PreviewArea = styled.div`
+  position: relative;
   background: #f5f2f0;
   padding: 20px;
   display: flex;
