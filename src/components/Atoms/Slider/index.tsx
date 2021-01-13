@@ -5,10 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Slider from '@material-ui/core/Slider';
 
 import { AppContext } from '../../Templates/CreateButtonView/index';
-import { EditType } from '../../../../type/index';
 
 interface Props {
-  editType: EditType;
+  editType: 'paddingX' | 'paddingY';
   styleSize: string;
   max: number;
 }

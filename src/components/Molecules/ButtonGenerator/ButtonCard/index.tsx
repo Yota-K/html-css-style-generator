@@ -33,6 +33,8 @@ export const ButtonCard: React.FC<Props> = ({ heading, styleObj, hoverStyle, act
           paddingX: customStyle.paddingX,
           paddingY: customStyle.paddingY,
           borderRadius: customStyle.borderRadius,
+          background: customStyle.background,
+          color: customStyle.color,
         },
       },
     });
