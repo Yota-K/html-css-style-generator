@@ -24,6 +24,8 @@ export const initialState: State = {
     paddingX: '4',
     paddingY: '12',
     borderRadius: '3',
+    background: '#fff',
+    color: '#67c5ff',
   },
 };
 

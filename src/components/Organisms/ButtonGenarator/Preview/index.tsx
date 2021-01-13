@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { AppContext } from '../../../Templates/CreateButtonView/index';
 import { AppTypography } from '../../../Atoms/Typography/index';
+import { ColorSelectArea } from '../../../Molecules/ColorSelectArea/index';
 import { GenerateButton } from '../../../Atoms/ButtonGenerator/Button/index';
 
 export const ButtonPreview = () => {
@@ -14,12 +15,14 @@ export const ButtonPreview = () => {
       <AppTypography variant="h3" text="プレビュー" />
       <PreviewArea>
         <GenerateButton styleObj={state.styleObj} hoverStyle={state.hoverStyle} activeStyle={state.activeStyle} />
+        <ColorSelectArea state={state} />
       </PreviewArea>
     </>
   );
 };
 
 const PreviewArea = styled.div`
+  position: relative;
   background: #f5f2f0;
   padding: 20px;
   display: flex;

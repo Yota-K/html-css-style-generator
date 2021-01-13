@@ -2,11 +2,10 @@ import React from 'react';
 
 import { AppTypography } from '../../Atoms/Typography/index';
 import { StyleChangeSlider } from '../../Atoms/Slider/index';
-import { EditType } from '../../../../type/index';
 
 interface Props {
   text: string;
-  editType: EditType;
+  editType: 'paddingX' | 'paddingY' | 'borderRadius';
   styleSize: string;
   max: number;
 }
